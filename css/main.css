@@ -622,5 +622,96 @@ section:not(.hero) {
 /*******************************************/
 
 /* My Portfolio Styles */
+.my-portfolio .grid {
+  grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
+}
 
+.my-portfolio .grid-item {
+  min-height: 35rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-item-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.portfolio-item-info {
+  width: 100%;
+  height: 100%;
+  background-color: var(--clr-blue);
+  color: var(--clr-light);
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 2rem;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.portfolio-item-info:hover {
+  opacity: 1;
+}
+
+.project-name {
+  font-size: 2rem;
+  letter-spacing: 1px;
+  margin-bottom: 0.7rem;
+  transform: translateY(-2rem);
+  transition: transform 0.5s;
+}
+
+.project-name span {
+  font-weight: 300;
+  opacity: 0.5;
+}
+
+.project-type {
+  font-size: 1.3rem;
+  opacity: 0.5;
+  transform: translateY(2rem);
+  transition: transform 0.5s;
+}
+
+.portfolio-item-info:hover .project-name,
+.portfolio-item-info:hover .project-type {
+  transform: translateY(0);
+}
+
+.info-cta {
+  margin-top: auto;
+}
+
+.info-btn {
+  color: var(--clr-light);
+  border: 1px solid var(--clr-light);
+}
+
+.info-btn:hover {
+  color: var(--clr-dark);
+  background-color: rgba(255, 255, 255, 0.7);
+  border-color: transparent;
+}
+
+.btn-blue {
+  background-color: var(--clr-blue);
+  color: var(--clr-light);
+}
+
+.btn-blue:hover {
+  background-color: #2977b1;
+}
+
+.load-more .btn {
+  margin-top: 2.5rem;
+  padding: 1rem 5rem;
+}
 /*******************************************/
