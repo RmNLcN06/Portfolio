@@ -733,7 +733,6 @@ section:not(.hero) {
 }
 
 .info-item-icon {
-  background-color: var(--clr-light-gray);
   display: flex;
   width: 10rem;
   font-size: 3rem;

@@ -1,4 +1,4 @@
-/* Constantes */
+// Constantes
 const bodyElement = document.querySelector("body");
 const menuToggle = document.querySelector(".hamburger-menu");
 const heroElement = document.querySelector(".hero");
@@ -11,6 +11,7 @@ menuToggle.addEventListener("click", function () {
   heroElement.classList.add("is-open");
 });
 
+// Au click, on enlève la class "is-open" à la class "nav-list"
 navList.addEventListener("click", function (e) {
   var clickedElement = e.target;
 
