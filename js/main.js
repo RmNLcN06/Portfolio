@@ -2,12 +2,21 @@
 const bodyElement = document.querySelector("body");
 const menuToggle = document.querySelector(".hamburger-menu");
 const heroElement = document.querySelector(".hero");
+const navList = document.querySelector(".nav-list");
 /**********************************/
 
 // Au click, on ajoute la class "is-open" à la class "hamburger-menu"
 menuToggle.addEventListener("click", function () {
   bodyElement.classList.toggle("is-open");
   heroElement.classList.add("is-open");
+});
+
+navList.addEventListener("click", function (e) {
+  var clickedElement = e.target;
+
+  if (clickedElement.classList[0] === "nav-link") {
+    bodyElement.classList.remove("is-open");
+  }
 });
 
 // Ajout de "eventListener" à l'objet "window" pour fermer la barre de menu quand on click en dehors du menu OU sur le bouton hamburger

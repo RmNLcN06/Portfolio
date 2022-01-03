@@ -28,6 +28,7 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -58,7 +59,6 @@ a {
   z-index: 1000;
   display: flex;
   flex-direction: column;
-  /* opacity: 0.5; */
 }
 
 .intro {
@@ -852,6 +852,93 @@ section:not(.hero) {
   .is-open .hero::after {
     opacity: 1;
     transform: scale(1);
+  }
+
+  .name-heading {
+    font-size: 25vw;
+  }
+
+  .portfolio-item-info {
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 1;
+  }
+
+  .project-name {
+    transform: translateY(0);
+  }
+
+  .project-type {
+    transform: translateY(0);
+  }
+
+  .info-btn:first-child {
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .grid,
+  .my-portfolio .grid {
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .hero {
+    height: 50rem;
+  }
+
+  .call-to-action p {
+    font-size: 2rem;
+  }
+
+  .motto {
+    height: 60vh;
+  }
+
+  .quote::before,
+  .quote::after {
+    font-size: 10rem;
+  }
+
+  .quote::before {
+    top: -4rem;
+    left: -3rem;
+  }
+
+  .quote::after {
+    bottom: -3rem;
+    right: -3rem;
+  }
+
+  .quote-by {
+    margin-top: 4rem;
+  }
+
+  .timeline-entry-name {
+    display: block;
+    font-size: 1.6rem;
+  }
+
+  .timeline-heading span {
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (orientation: landscape) and (max-width: 1000px) {
+  .nav {
+    overflow-y: scroll;
+  }
+
+  .hero {
+    height: initial;
+    min-height: 100vh;
+  }
+}
+
+@media screen and (min-width: 1925px) {
+  html {
+    font-size: 75%;
   }
 }
 /*******************************************/
