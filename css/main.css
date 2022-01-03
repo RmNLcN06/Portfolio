@@ -715,3 +715,143 @@ section:not(.hero) {
   padding: 1rem 5rem;
 }
 /*******************************************/
+
+/* Contact Styles */
+.contact-info-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.contact-info {
+  flex-basis: 45%;
+}
+
+.contact-info-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2.5rem;
+}
+
+.info-item-icon {
+  background-color: var(--clr-light-gray);
+  display: flex;
+  width: 10rem;
+  font-size: 5rem;
+  color: var(--clr-blue);
+  border-radius: 3px;
+}
+
+.info-item-icon i {
+  margin: auto;
+}
+
+.data-wrapper {
+  margin-left: 2rem;
+}
+
+.info-item-data {
+  display: block;
+  font-size: 1.4rem;
+  line-height: 1.5;
+}
+
+.contact-form {
+  flex: 1;
+}
+
+.contact-form .input,
+.contact-form textarea {
+  width: 100%;
+  background-color: var(--clr-light-gray);
+  font-family: var(--body-font-family);
+  color: var(--body-font-color);
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+  border: none;
+  border-radius: 3px;
+  margin-bottom: 2rem;
+  padding: 1rem;
+}
+
+.contact-form .btn {
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+/*******************************************/
+
+/* Media Queries */
+@media screen and (max-width: 1030px) {
+  .nav {
+    transform: translateX(-27rem);
+    transition: transform 0.5s;
+  }
+
+  .is-open .nav {
+    transform: translateX(0);
+  }
+
+  .hamburger-menu {
+    display: flex;
+    width: 5rem;
+    height: 5rem;
+    background-color: var(--clr-dark);
+    color: var(--clr-light);
+    position: fixed;
+    top: 0;
+    left: 0;
+    font-size: 2.6rem;
+    cursor: pointer;
+    transition: transform 0.5s;
+    z-index: 2000;
+  }
+
+  .hamburger-menu i {
+    margin: auto;
+  }
+
+  .close {
+    display: none;
+  }
+
+  .is-open .hamburger-menu {
+    transform: translateX(21rem);
+  }
+
+  .is-open .close {
+    display: block;
+  }
+
+  .is-open .open {
+    display: none;
+  }
+
+  .main {
+    width: 100%;
+    transform: initial;
+  }
+
+  .hero {
+    height: 80vh;
+  }
+
+  .hero::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 999;
+    opacity: 0;
+    transform: scale(0);
+    transition: opacity 0.5s;
+  }
+
+  .is-open .hero::after {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+/*******************************************/
