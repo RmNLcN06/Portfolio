@@ -736,7 +736,7 @@ section:not(.hero) {
   background-color: var(--clr-light-gray);
   display: flex;
   width: 10rem;
-  font-size: 5rem;
+  font-size: 3rem;
   color: var(--clr-blue);
   border-radius: 3px;
 }
@@ -826,7 +826,7 @@ section:not(.hero) {
     display: none;
   }
 
-  .main {
+  main {
     width: 100%;
     transform: initial;
   }
