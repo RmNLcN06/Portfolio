@@ -29,3 +29,35 @@ window.addEventListener("click", function (e) {
     heroElement.classList.remove("is-open");
   }
 });
+
+// Ajout de l'effet du bouton "load-more" : à chaque clic, + 3 projects apparaissent -> 9 projets en tout. Quand 9 projets visibles, ALORS bouton: display: none
+let loadMoreBtn = document.querySelector(".load-more");
+
+loadMoreBtn.onclick = () => {
+  var projetVisible = 3;
+  var gridItem = [...document.querySelectorAll(".grid-item-portfolio")];
+  for (var i = projetVisible; i < projetVisible + 3; i++) {
+    gridItem[i].style.display = "inline-block";
+  }
+  projetVisible += 3;
+
+  if (projetVisible >= gridItem.length) {
+    loadMoreBtn.style.display = "none";
+  }
+};
+
+/*loadMoreBtn.addEventListener("clic", loadProjets);
+
+function loadProjets() {
+  var gridItem = [
+    ...document.querySelectorAll(".container .grid .grid-item-portfolio"),
+  ];
+  for (var i = projetVisible; i < projetVisible + 3; i++) {
+    gridItem[i].setAttribute("class", "ajoutProjets");
+  }
+  projetVisible += 3;
+
+  if (projetVisible >= gridItem.length) {
+    loadMoreBtn.setAttribute("class", "loadHidden");
+  }
+}*/

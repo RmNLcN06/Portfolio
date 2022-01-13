@@ -357,7 +357,7 @@ section:not(.hero) {
 /* My Expertise Styles */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(38rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
   gap: 2.5rem;
 }
 
@@ -379,10 +379,6 @@ section:not(.hero) {
 
 .grid-item.pink {
   border-bottom-color: var(--clr-pink);
-}
-
-.grid-item.yellow {
-  border-bottom-color: var(--clr-yellow);
 }
 
 .grid-item.purple {
@@ -427,10 +423,6 @@ section:not(.hero) {
 
 .blue i {
   color: var(--clr-blue);
-}
-
-.yellow i {
-  color: var(--clr-yellow);
 }
 
 .item-icon {
@@ -589,72 +581,6 @@ section:not(.hero) {
 }
 /*******************************************/
 
-/* Motto Styles */
-.motto {
-  height: 35vh;
-  background: url() bottom/cover;
-  position: relative;
-  z-index: 1;
-}
-
-.motto::before {
-  content: "";
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.75);
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-}
-
-.motto .container {
-  height: 100%;
-  display: flex;
-}
-
-.quote-wrapper {
-  margin: auto;
-  max-width: 50rem;
-  text-align: center;
-  color: var(--clr-light);
-}
-
-.quote {
-  font-size: 2rem;
-  font-weight: 300;
-  padding: 0.5rem;
-  position: relative;
-}
-
-.quote::before,
-.quote::after {
-  position: absolute;
-  font-size: 15rem;
-  width: 5rem;
-  height: 5rem;
-  font-family: sans-serif;
-}
-
-.quote::before {
-  content: open-quote;
-  top: -0.5rem;
-  left: -6rem;
-}
-
-.quote::after {
-  content: close-quote;
-  bottom: -0.5rem;
-  right: -6rem;
-}
-
-.quote-by {
-  display: block;
-  text-align: right;
-  margin-top: 2rem;
-}
-/*******************************************/
-
 /* Work Experience Styles */
 .timeline {
   position: relative;
@@ -731,7 +657,7 @@ section:not(.hero) {
   grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
 }
 
-.my-portfolio .grid-item {
+.my-portfolio .grid-item-portfolio {
   min-height: 35rem;
   position: relative;
   overflow: hidden;
@@ -815,9 +741,23 @@ section:not(.hero) {
   background-color: #2977b1;
 }
 
-.load-more .btn {
+.load-more.btn {
   margin-top: 2.5rem;
   padding: 1rem 5rem;
+}
+
+.ajoutProjets {
+  display: inline-block;
+}
+
+.loadHidden {
+  display: none;
+}
+
+.container .grid .grid-item-portfolio:nth-child(1),
+.container .grid .grid-item-portfolio:nth-child(2),
+.container .grid .grid-item-portfolio:nth-child(3) {
+  display: inline-block;
 }
 /*******************************************/
 
@@ -994,10 +934,6 @@ section:not(.hero) {
 
   .call-to-action p {
     font-size: 2rem;
-  }
-
-  .motto {
-    height: 60vh;
   }
 
   .quote::before,
