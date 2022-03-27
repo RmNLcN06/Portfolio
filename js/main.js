@@ -3,7 +3,13 @@ const bodyElement = document.querySelector("body");
 const menuToggle = document.querySelector(".hamburger-menu");
 const heroElement = document.querySelector(".hero");
 const navList = document.querySelector(".nav-list");
+const darkMode = document.getElementById("dark-mode");
 /**********************************/
+
+// Au click de changement, on ajoute ou enlève la class "dark"
+darkMode.addEventListener("change", function () {
+  document.body.classList.toggle("dark");
+});
 
 // Au click, on ajoute la class "is-open" à la class "hamburger-menu"
 menuToggle.addEventListener("click", function () {
